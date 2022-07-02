@@ -1,13 +1,11 @@
-:root {
-  --brand-color: #757575;
-  --beside-color: #2196f3;
-  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 /*moje*/
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: var(--brand-color);
   background-color: #ffffff;
+  scroll-behavior: smooth;
+  min-height: 100vh;
 }
 h1,
 h2,
@@ -19,6 +17,7 @@ h4 {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 p {
   margin: 0;
@@ -26,35 +25,14 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
 }
-/* Указываем box sizing */
-*,
+
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-ul {
-  padding: 0;
-}
-
-
-
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
- 
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul {
-  list-style: none;
-}
-
-/* 
-Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 
   a {
     color:inherit;
@@ -62,18 +40,6 @@ ul {
   }
 
 
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,

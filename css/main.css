@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -20,6 +19,8 @@ body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: var(--brand-color);
   background-color: #ffffff;
+  scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 h1,
@@ -33,6 +34,7 @@ h4 {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 p {
@@ -42,50 +44,19 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
-/* Указываем box sizing */
-*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-ul {
-  padding: 0;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul {
-  list-style: none;
-}
-
-/* 
-Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -105,9 +76,13 @@ select {
   height: 80px;
 }
 
-.customers, .members, .solutions, .skills {
+.cards, .filters, .customers, .members, .solutions, .skills {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.header {
+  border-bottom: 1px solid #ECECEC;
 }
 
 .customers__title, .members__title, .solutions__title {
@@ -118,7 +93,7 @@ select {
   letter-spacing: 0.03em;
 }
 
-.newsletter__btn, .banner__button {
+.newsletter__btn, .filters__button, .banner__button {
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -126,10 +101,11 @@ select {
   text-align: center;
   border-radius: 4px;
   line-height: 1.8;
-  transition: color var(--animation);
+  transition: color var(--animation), background-color var(--animation);
 }
-.newsletter__btn:hover, .banner__button:hover {
+.newsletter__btn:hover, .filters__button:hover, .banner__button:hover {
   background-color: #188ce8;
+  color: white;
 }
 
 .logo {
@@ -206,7 +182,7 @@ select {
 .navigation__link--active::after {
   content: "";
   position: absolute;
-  bottom: -35px;
+  bottom: -32px;
   display: block;
   width: 100%;
   border-top: 4px solid var(--beside-color);
@@ -275,6 +251,7 @@ select {
   padding: 15px 32px;
   color: #ffffff;
   background: var(--beside-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   width: 200px;
 }
 
@@ -492,7 +469,18 @@ select {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: var(--animation);
+  opacity: 1;
+  transition: opacity var(--animation), visibility var(--animation);
+}
+
+.backdrop.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.visually-hidden .modal {
+  transform: translate(-100%);
 }
 
 .modal {
@@ -507,7 +495,6 @@ select {
   padding: 40px;
   border-radius: 4px;
 }
-
 .modal:hover {
   background-color: #fff;
 }
@@ -664,8 +651,96 @@ select {
   cursor: pointer;
 }
 
-.visually-hidden .modal {
-  transform: translate(-100%);
+.filters {
+  padding-bottom: 0px;
+}
+
+.filters__set {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filters__button {
+  padding: 6px 22px;
+  transition: all var(--animation);
+}
+.filters__button--active {
+  color: white;
+  background-color: var(--beside-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filters__button:hover, .filters__button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cards {
+  padding-top: 50px;
+}
+
+.cards__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: canter;
+  gap: 29px;
+}
+
+.cards__grid-item {
+  background-color: #ffffff;
+}
+.cards__grid-item:hover, .cards__grid-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card__image-box {
+  position: relative;
+  overflow: hidden;
+  height: 296px;
+  width: 370px;
+}
+
+.card__overlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatey(101%);
+  color: #fff;
+  padding-top: 49px;
+  padding-left: 24px;
+  padding-right: 45px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  transition: color var(--animation);
+}
+
+.card:hover .card__overlay {
+  transform: translateX(0);
+}
+
+.card__txt-box {
+  padding: 20px 24px;
+  height: 110px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card__txt-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: #212121;
+}
+
+.card__txt-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--brand-color);
 }
 
 .footer {
