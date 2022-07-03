@@ -4,9 +4,12 @@
   margin-right: 93px;
   flex-direction: row;
   text-decoration: none;
+  font-family: 'Raleway';
+font-style: normal;
   font-size: 26px;
   line-height: 1.2;
-  font-weight: 700;}
+  font-weight: 700;
+letter-spacing: 0.03em;}
 
   .logo__header {
   background-color: #ffffff;
@@ -31,19 +34,3 @@
   color: var(--beside-color);
 }}
 
-// wcześniej
-// .header-logo {
-//   color: var(--beside-color);
-// }
-
-// .header-logo-studio {
-//   color: #ffffff;
-// }
-// .header-logo-studio {
-//   color: #ffffff;
-// }
-// .icon-logo {
-//   margin-left: 15px;
-//   margin-right: 15px;
-//   transition: color var(--animation);
-// }

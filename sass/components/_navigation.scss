@@ -9,6 +9,8 @@
 .navigation__link {
   display: flex;
   align-items: center;
+  color: #212121;
+  font-weight: 500;
 }
 .navigation__link--active {
   color: var(--beside-color);

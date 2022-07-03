@@ -5,23 +5,21 @@
   margin-left: auto;
   flex-wrap:nowrap;
   gap:30px;
-}
-
-.contacts__link {
+&__link {
   font-size: 14px;
   line-height: 1.1;
   color: var(--brand-color);
   display: flex;
   align-items: center;
    gap:10px;
-  transition: color var(--animation);
+  transition: color var(--animation);}
 &:hover {
   color: var(--beside-color);
-}}
-.contacts__icon {
+}
+&__icon {
 
   fill: currentColor;
-  transition: fill var(--animation);
+  transition: fill var(--animation);}
 &:hover,
 &:focus {
   color: var(--beside-color);

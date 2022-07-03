@@ -1,19 +1,18 @@
 .skills{
     @extend %section;
 
-}
-.skills__list {
+&__list {
 
   display: flex;
   flex-wrap: nowrap;
   gap: 30px;
 }
-.skills__item {
+&__item {
  display: flex;
  flex-direction: column;
  gap:10px;
  width:270px;
-}
+}}
 
 
 .skill__container-icon {

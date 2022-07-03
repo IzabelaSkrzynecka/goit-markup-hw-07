@@ -1,5 +1,6 @@
 .solutions{
     @extend %section;
+   padding-top:0px;
 }
 .solutions__title {
   @extend %title;
@@ -16,13 +17,6 @@
    overflow: hidden;
 }
 
-// // .img-index {
-//   display: flex;
-//   align-items: center;
-//   margin-right: 30px;
-//   margin-left: auto;
- 
-// }
 .solution__desc {
   position: absolute;
   bottom: 0;

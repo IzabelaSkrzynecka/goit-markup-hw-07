@@ -1,34 +1,30 @@
 .cards{
     @extend %section;
     padding-top:50px;
-}
-.cards__grid {
+&__grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: canter;
   gap:29px;
 }
-.cards__grid-item {
+&__grid-item {
   background-color: #ffffff;
+}
   
-
 &:hover,
 &:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }}
-// .card {  
-// //   border: 1px solid #EEEEEE;
-// }
 
-.card__image-box {
+.card {
+&__image-box {
    position: relative;
   overflow: hidden; 
   height: 296px;
   width: 370px;
 }
-
-.card__overlay {
+&__overlay {
      position: absolute;
      z-index: 3;
   top: 0;
@@ -46,32 +42,25 @@
   line-height: 1.55;
   transition: color var(--animation);
 }
-.card:hover .card__overlay {
+&:hover .card__overlay {
   transform: translateX(0);
 }
-
-
-.card__txt-box{
+&__txt-box{
 padding: 20px 24px;
 height: 110px;
-
-
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 
-.card__txt-title{
+&__txt-title{
     font-weight: 700;
  font-size: 18px;
   line-height: 2;
   color: #212121;
- 
 }
-.card__txt-description {
+ &__txt-description {
     font-size: 16px;
   line-height: 1.8;
   color: var(--brand-color);
-  
-
-}
+ }}
