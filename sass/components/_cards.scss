@@ -40,7 +40,7 @@
   margin: 0;
   font-size: 18px;
   line-height: 1.55;
-  transition: color var(--animation);
+  transition: background-color var(--animation);
 }
 &:hover .card__overlay {
   transform: translateX(0);

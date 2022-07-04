@@ -14,16 +14,16 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 auto;
+  margin: 0 auto;}
 
 
-&__text-container {
+.banner__text-container {
     max-width: 696px;
   margin: 0 auto;  text-align: center;
-  padding: 200px 0 280px 0;
+ 
 }
 
-&__title {
+.banner__title {
   font-size: 44px;
   line-height: 1.3;
 
@@ -31,10 +31,9 @@
 
   margin-bottom: 30px;
 }
-&__button {
+.banner__button {
   @extend %button;
   padding: 15px 32px;
   
   width: 200px;
-}
 }

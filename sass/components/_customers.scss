@@ -28,19 +28,16 @@ margin-left:15px;
   align-items: center; 
    transition: color var(--animation);
 &:last-child {
-  margin-right: 0;
-}
+  margin-right: 0;}
 &:hover,
 &:focus{
- 
   border: 1px solid var(--beside-color);
 }
-
 }
-
 .customers__link:hover .customers__logo,
 .customers__item:focus .customers__logo{
   fill: var(--beside-color);}
+
  
 .customers__logo {
   fill:#afb1b8 ;
@@ -48,9 +45,8 @@ margin-left:15px;
   height: 52px;
 transition: fill var(--animation);
 
+
 }
-
-
 
 .icon-logo-box {
   display: flex;

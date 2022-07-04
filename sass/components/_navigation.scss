@@ -14,8 +14,8 @@
 }
 .navigation__link--active {
   color: var(--beside-color);
-  position: relative;
-&::after {
+  position: relative;}
+.navigation__link::after {
   content: "";
   position: absolute;
   bottom: -32px;
@@ -23,4 +23,4 @@
   width: 100%;
   border-top: 4px solid var(--beside-color);
   border-radius: 2px;
-}}
+}
