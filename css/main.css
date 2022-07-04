@@ -182,6 +182,10 @@ select {
   font-weight: 500;
 }
 
+.navigation__link:hover {
+  color: var(--beside-color);
+}
+
 .navigation__link--active {
   color: var(--beside-color);
   position: relative;

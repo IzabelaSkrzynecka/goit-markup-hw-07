@@ -11,6 +11,10 @@
   align-items: center;
   color: #212121;
   font-weight: 500;
+
+}
+&__link:hover {
+  color: var(--beside-color);
 }
 .navigation__link--active {
   color: var(--beside-color);

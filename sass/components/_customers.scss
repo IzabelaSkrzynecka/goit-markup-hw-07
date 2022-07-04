@@ -29,14 +29,11 @@ margin-left:15px;
    transition: color var(--animation);
 &:last-child {
   margin-right: 0;}
-&:hover,
-&:focus{
-  border: 1px solid var(--beside-color);
+
 }
-}
-.customers__link:hover .customers__logo,
-.customers__item:focus .customers__logo{
-  fill: var(--beside-color);}
+// .customers__logo:hover,
+// .customers__logo:focus  {
+//   fill: var(--beside-color);}
 
  
 .customers__logo {
