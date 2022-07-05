@@ -11,20 +11,25 @@
   align-items: center;
   color: #212121;
   font-weight: 500;
+  &__link:hover {
+    color: var(--beside-color);
+  }
+}
 
-}
-&__link:hover {
-  color: var(--beside-color);
-}
 .navigation__link--active {
   color: var(--beside-color);
-  position: relative;}
-.navigation__link::after {
-  content: "";
-  position: absolute;
-  bottom: -32px;
-  display: block;
-  width: 100%;
-  border-top: 4px solid var(--beside-color);
-  border-radius: 2px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    border-top: 4px solid var(--beside-color);
+    border-radius: 2px;
+    @media screen  and  (min-width:768px){
+       bottom: -32px;
+    }
+  }
 }

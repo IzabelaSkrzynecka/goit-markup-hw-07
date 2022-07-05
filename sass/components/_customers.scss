@@ -1,9 +1,9 @@
 .customers {
-    @extend %section;
+  @extend %section;
 }
 .customers__title {
-    @extend %title;
-    margin-bottom: 50px;
+  @extend %title;
+  margin-bottom: 50px;
 }
 .customers__list {
   display: flex;
@@ -15,40 +15,31 @@
   margin-right: -15px;
 }
 
-
-.customers__item  {
+.customers__link  {
   width: 170px;
   height: 92px;
   display: flex;
-  margin-right:15px;
-margin-left:15px;
+  margin-right: 15px;
+  margin-left: 15px;
   border: #afb1b8 solid 1px;
+  color: #afb1b8;
   border-radius: 4px;
   justify-content: center;
-  align-items: center; 
-   transition: color var(--animation);
-&:last-child {
-  margin-right: 0;}
+  align-items: center;
+  transition: color var(--animation), border var(--animation);
 
-}
-// .customers__logo:hover,
-// .customers__logo:focus  {
-//   fill: var(--beside-color);}
+&:hover,
+&:focus  {
+  color: var(--beside-color);
+  border: 1px solid  var(--beside-color);
+}}
 
- 
+
+
 .customers__logo {
-  fill:#afb1b8 ;
+  fill:currentColor;
   width: 106px;
   height: 52px;
-transition: fill var(--animation);
-
-
+  
 }
 
-.icon-logo-box {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-}

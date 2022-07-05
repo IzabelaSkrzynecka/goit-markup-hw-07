@@ -181,8 +181,7 @@ select {
   color: #212121;
   font-weight: 500;
 }
-
-.navigation__link:hover {
+.navigation__link__link:hover {
   color: var(--beside-color);
 }
 
@@ -190,15 +189,19 @@ select {
   color: var(--beside-color);
   position: relative;
 }
-
-.navigation__link::after {
+.navigation__link--active::after {
   content: "";
   position: absolute;
-  bottom: -32px;
+  bottom: -25px;
   display: block;
   width: 100%;
   border-top: 4px solid var(--beside-color);
   border-radius: 2px;
+}
+@media screen and (min-width: 768px) {
+  .navigation__link--active::after {
+    bottom: -32px;
+  }
 }
 
 .contacts {
@@ -436,43 +439,28 @@ select {
   margin-right: -15px;
 }
 
-.customers__item {
+.customers__link {
   width: 170px;
   height: 92px;
   display: flex;
   margin-right: 15px;
   margin-left: 15px;
   border: #afb1b8 solid 1px;
+  color: #afb1b8;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  transition: color var(--animation);
+  transition: color var(--animation), border var(--animation);
 }
-.customers__item:last-child {
-  margin-right: 0;
-}
-.customers__item:hover, .customers__item:focus {
+.customers__link:hover, .customers__link:focus {
+  color: var(--beside-color);
   border: 1px solid var(--beside-color);
 }
 
-.customers__link:hover .customers__logo,
-.customers__item:focus .customers__logo {
-  fill: var(--beside-color);
-}
-
 .customers__logo {
-  fill: #afb1b8;
+  fill: currentColor;
   width: 106px;
   height: 52px;
-  transition: fill var(--animation);
-}
-
-.icon-logo-box {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
 }
 
 .backdrop {
@@ -665,6 +653,7 @@ select {
 .filters {
   padding-bottom: 0px;
 }
+
 .filters__set {
   display: flex;
   justify-content: center;
@@ -675,12 +664,14 @@ select {
   padding: 6px 22px;
   transition: all var(--animation);
 }
+
 .filters__button--active {
   color: white;
   background-color: var(--beside-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.filters__button:hover, .filters__button:focus {
+
+.filters__button:hover,
+.filters__button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
