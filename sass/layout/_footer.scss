@@ -4,20 +4,20 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-.footer__direction {
+
+&__direction {
   display: flex;
   align-items: baseline;
 }
 
-.footer__address {
+&__address {
   display: flex;
   flex-direction: column;
   align-items: left;
   margin-top: 30px;
   gap: 9px;
   list-style: none;
-}
+}}
 
 .footer__contact {
   color: #ffffff;
@@ -34,8 +34,8 @@
  display: flex;
  flex-direction: column;
  gap: 20px;
-}
-.sidebar__title {
+
+&__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -44,6 +44,6 @@
   color: var(--white_color);
   
 }
-
+}
 
 

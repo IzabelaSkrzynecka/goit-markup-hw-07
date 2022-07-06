@@ -1,11 +1,11 @@
 .customers {
   @extend %section;
-}
-.customers__title {
+
+&__title {
   @extend %title;
   margin-bottom: 50px;
 }
-.customers__list {
+&__list {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -15,6 +15,12 @@
   margin-right: -15px;
 }
 
+&__logo {
+  fill:currentColor;
+  width: 106px;
+  height: 52px;
+}
+}
 .customers__link  {
   width: 170px;
   height: 92px;
@@ -36,10 +42,5 @@
 
 
 
-.customers__logo {
-  fill:currentColor;
-  width: 106px;
-  height: 52px;
-  
-}
+
 

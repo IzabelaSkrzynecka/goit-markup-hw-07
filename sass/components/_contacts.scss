@@ -12,14 +12,16 @@
   display: flex;
   align-items: center;
    gap:10px;
-  transition: color var(--animation);}
-.contacts__link:hover {
+  transition: color var(--animation);
+&:hover {
   color: var(--beside-color);
+}
 }
 .contacts__icon {
   fill: currentColor;
-  transition: fill var(--animation);}
-.contacts__icon:hover,
-.contacts__icon:focus {
+  transition: fill var(--animation);
+&:hover,
+&:focus {
   color: var(--beside-color);
+}
 }
